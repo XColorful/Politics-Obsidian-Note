@@ -10,7 +10,7 @@
 |[思修](思修/思想道德与法治.md)|[移除行首标签](移除行首标签.cmd)|[Github Desktop](https://github.com/apps/desktop)|
 |[史纲](史纲/中国近代史纲要.md)|[恢复行首标签](恢复行首标签.cmd)|[笔记仓库页面](https://github.com/XColorful/Politics-Obsidian-Note)|
 |[毛中特](毛中特/毛泽东思想和中国特色社会主义理论体系概论.md)|[替换首行字符串](替换首行字符串.cmd)|[笔记仓库Issue](https://github.com/XColorful/Politics-Obsidian-Note/issues)|
-|[新思想](新思想/习近平新时代中国特色社会主义思想概论.md)||[笔记仓库Wiki](https://github.com/XColorful/Politics-Obsidian-Note/wiki)|
+|[新思想](新思想/习近平新时代中国特色社会主义思想概论.md)|[SQLite 镜像](sqlite/README.md)|[笔记仓库Wiki](https://github.com/XColorful/Politics-Obsidian-Note/wiki)|
 
 ## 使用说明
 > 💡我是小白，点击查看[图文教程](https://github.com/XColorful/Politics-Obsidian-Note/wiki)😀（笔记内查看[离线版教程](./Wiki/Home.md)）
@@ -42,6 +42,13 @@
 > - 运行前：若已修改笔记，请务必先完成`Commit x files to xxx`
 > - 纯查看：运行脚本查看完图谱，再`恢复行首标签`后如果[Github Desktop](https://github.com/apps/desktop)里修改没清除，则直接全选修改，右键点击`Discard changes`即可还原
 > - 有修改：若在移除标签期间修改了笔记，请先运行`恢复行首标签.cmd`，确认无误后再`Commit x files to xxx`
+
+#### SQLite 镜像
+> 把所有笔记结构化导入 SQLite，方便用 SQL 抽背 / 统计标签 / 查关系图。
+- 详细说明：[sqlite/README.md](sqlite/README.md)（含 schema、用法、示例查询）
+- 直接查询：`sqlite3 sqlite/politics.db "..."`
+- 笔记更新后重新生成：`python sqlite/sqlite_import.py`（需 Python 3.10+，仅标准库）
+- 仓库自带预生成的 `sqlite/politics.db`（1.4 MB），clone 后直接可用
 
 ## 笔记展示
 
